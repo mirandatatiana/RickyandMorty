@@ -1,0 +1,21 @@
+body {
+  background-color: #757177;
+}
+
+.cards {
+  display: flex;
+  border-radius: 10px;
+}
+.cards .card {
+  width: 200px;
+  border: 1px solid white;
+}
+.cards .card .tarjeta-principal {
+  background-color: #1f1e1e;
+}
+.cards .card .tarjeta-principal h1 {
+  font-size: 20px;
+  color: #757177;
+}
+
+/*# sourceMappingURL=style.css.map */

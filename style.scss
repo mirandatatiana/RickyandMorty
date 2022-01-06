@@ -1,0 +1,23 @@
+$color-principal: #757177;
+$color-secundario: rgb(31, 30, 30);
+
+body {
+  background-color: $color-principal;
+}
+
+.cards {
+  display: flex;
+  border-radius: 10px;
+
+  .card {
+    width: 200px;
+    border: 1px solid white;
+    .tarjeta-principal {
+      background-color: $color-secundario;
+      h1 {
+        font-size: 20px;
+        color: $color-principal;
+      }
+    }
+  }
+}
