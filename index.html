@@ -8,20 +8,76 @@
     <title>Document</title>
   </head>
   <body>
-    <div id="button-controls">
-      <button id="prev">pagina anterior</button>
-      <button id="next">pagina siguiente</button>
-    </div>
-    <form id="form">
-      <label
-        >Buscar un personaje
-        <input id="character" type="text" />
-      </label>
-    </form>
+    <!--Navigation-->
+    <nav class="nav">
+      <div>
+        <!--Logo-->
+      </div>
+      <div class="nav-int">
+        <a class="nav-links" href="#character">CHARACTER</a>
+        <a class="nav-links" href="#location">LOCATION</a>
+        <a class="nav-links" href="#episodes">EPISODES</a>
+      </div>
+    </nav>
 
-    <div id="cards"></div>
-    <div id="card"></div>
-    <div id="search"></div>
+    <main>
+      <!--Search Character-->
+      <section class="form-section">
+        <nav class="nav">
+          <div class="nav-int">
+            <form id="form">
+              <label>
+                <input id="character" type="text" />
+              </label>
+            </form>
+          </div>
+        </nav>
+      </section>
+      <!-- 
+      Search Location
+      <section>
+        <form id="form-location">
+          <label>
+            <input id="location-input" type="text" />
+          </label>
+        </form>
+      </section>
+
+     Search Episode
+      <section>
+        <form id="form-episode">
+          <label>
+            <input id="episodes" type="text" />
+          </label>
+        </form>
+      </section> -->
+
+      <!--Cards characters-->
+      <section id="section-cards">
+        <div id="cards"></div>
+        <div id="card-only"></div>
+      </section>
+      <div id="personajes"></div>
+
+      <section id="section-details"></section>
+
+      <!--Cards Location-->
+      <!-- <section>
+        <div id="cards-location"></div>
+        <div id="card-location"></div>
+      </section> -->
+      <!--Buttons of previus page and next page -->
+      <section>
+        <div id="button-controls">
+          <button id="prev">pagina anterior</button>
+          <button id="next">pagina siguiente</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <!--Poner api-->
+    </footer>
   </body>
   <script src="app.js"></script>
 </html>

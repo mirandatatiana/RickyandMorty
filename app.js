@@ -2,6 +2,11 @@ const tarjetas = document.querySelector("#cards")
 const busqueda = document.querySelector("#search")
 const prev = document.querySelector("#prev")
 const next = document.querySelector("#next")
+const formSection = document.querySelector(".form-section")
+
+
+const targetSection = document.querySelector("#section-cards")
+const targetDetails = document.querySelector("#section-details")
 
 // Home Page
 let actualPage = 1
@@ -11,10 +16,17 @@ const searchInfo = () => {
             return res.json()
         })
         .then((data) => {
-            cardsAll(data.results)
+            cardsAllHTML(data.results)
+
+            characterOnly()
+
         })
 }
 searchInfo()
+
+
+
+
 // Next Page
 next.onclick = () => {
     actualPage = actualPage + 1
@@ -30,19 +42,24 @@ prev.onclick = () => {
     searchInfo()
 }
 
-const cardsAll = (data) => {
+const cardsAllHTML = (data) => {
     const html = data.reduce((acc, curr) => {
         return acc + `
-          <div class="tarjeta">
+          <div class="card" data-id="${curr.id}">
            <h2>${curr.name}</h2>
-            <img src =${curr.image}> </img>
+            <img class="img" src =${curr.image}> </img>
            <p>${curr.gender}</p>
            </div>
            `
     }, "")
     cards.innerHTML = html
 
+
 }
+searchInfo()
+
+
+
 
 
 //Seach Caracter
@@ -53,6 +70,9 @@ const searchInfoCharacter = (name) => {
         })
         .then((data) => {
             cardOnly(data.results)
+            characterOnly()
+
+
         })
 }
 
@@ -61,14 +81,16 @@ const searchInfoCharacter = (name) => {
 const cardOnly = (character) => {
     const html = character.reduce((acc, curr) => {
         return acc + `
-          <div class="tarjeta">
+          <div class="card" data-id="${curr.id}">
            <h2>${curr.name}</h2>
-            <img src =${curr.image}> </img>
+            <img class="img" src =${curr.image}> </img>
            <p>${curr.gender}</p>
            </div>       
            `
     }, "")
     cards.innerHTML = html
+
+
 }
 
 
@@ -80,33 +102,58 @@ form.onsubmit = (e) => {
     e.preventDefault();
     searchInfoCharacter(inputCharacter.value)
 }
-//tengo que poner cada buscadaor en cada espacio de la pagina y ver como haria llegar al
-// fetch("https://rickandmortyapi.com/api/character")
-//     .then((res) => {
-//         return res.json()
-//     })
-//     .then((data) => {
-//         crearBusqueda(data.results)
-//     })
-
-// const crearBusqueda = (array) => {
-//     const html = array.reduce((acc, curr) => {
-//         return acc + `
-//               <div class="tarjeta">
-//                <h2>${curr.value}</h2>
-//                 <img src =${curr.value}> </img>
-//                <p>${curr.value}</p>
-//                </div>
-//                `
-//     }, "")
-//     search.innerHTML = html
-// }
-
-// cuando sea en la pagina se pondra el lugar de la pagina
 
 
-//open web appi key AIzaSyD-mpKwV5ndjGtxw-UlGCsk9taN75izSZI
 
-// fetch("https://rickandmortyapi.com/api/character")
-//     .then(res => res.json())
-//     .then(data => console.log(data))
+
+
+
+const infoIdCharacter = (id) => {
+    fetch(`https://rickandmortyapi.com/api/character/${id}`)
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            view(data)
+
+
+
+        })
+}
+
+const view = (data) => {
+    targetSection.style.display = "none"
+    targetDetails.style.display = "flex"
+    formSection.style.display = "none"
+
+
+
+    targetDetails.innerHTML = `
+   
+          <div class="cardFull">
+ <img class="img" src =${data.image}> </img>
+ <div>
+           <span>${data.name}<span>
+</div>
+  <div>         
+           <span>${data.gender}</span>
+       </div>
+           </div>    
+           `
+}
+
+
+
+
+
+const characterOnly = () => {
+    const cardOnly = document.querySelectorAll(".card")
+    for (let i = 0; i < cardOnly.length; i++) {
+        cardOnly[i].onclick = () => {
+
+            const id = cardOnly[i].dataset.id
+            infoIdCharacter(id)
+        }
+    }
+}
+
+
