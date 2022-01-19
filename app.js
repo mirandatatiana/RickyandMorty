@@ -3,10 +3,10 @@ const busqueda = document.querySelector("#search")
 const prev = document.querySelector("#prev")
 const next = document.querySelector("#next")
 const formSection = document.querySelector(".form-section")
-
-
+const closebutton = document.querySelector(".close")
+const container = document.querySelector(".container-details")
 const targetSection = document.querySelector("#section-cards")
-const targetDetails = document.querySelector("#section-details")
+const targetDetails = document.querySelector(".section-details")
 
 // Home Page
 let actualPage = 1
@@ -48,7 +48,7 @@ const cardsAllHTML = (data) => {
           <div class="card" data-id="${curr.id}">
            <h2>${curr.name}</h2>
             <img class="img" src =${curr.image}> </img>
-           <p>${curr.gender}</p>
+           
            </div>
            `
     }, "")
@@ -84,7 +84,6 @@ const cardOnly = (character) => {
           <div class="card" data-id="${curr.id}">
            <h2>${curr.name}</h2>
             <img class="img" src =${curr.image}> </img>
-           <p>${curr.gender}</p>
            </div>       
            `
     }, "")
@@ -121,24 +120,44 @@ const infoIdCharacter = (id) => {
 }
 
 const view = (data) => {
-    targetSection.style.display = "none"
+
     targetDetails.style.display = "flex"
-    formSection.style.display = "none"
+    container.style.display = "flex"
 
 
 
-    targetDetails.innerHTML = `
-   
+    targetDetails.innerHTML =
+        `
           <div class="cardFull">
- <img class="img" src =${data.image}> </img>
- <div>
-           <span>${data.name}<span>
+          <button class="close">✖</button>
+          
+ <img class="img" src = "${data.image}"> </img>
+ <div class="cardOfcards">
+ 
+           <h3>${data.name} </h3>
+           <p><b>Status: </b>${data.status} - ${data.species} - ${data.gender}</p>          
+ 
+         <div>
+<h4>Firts Seen in:</h4>
+<p> ${data.origin.name}</p>
 </div>
-  <div>         
-           <span>${data.gender}</span>
-       </div>
-           </div>    
-           `
+
+<div>
+<h4>Last Location in:</h4>
+<p> ${data.location.name}</p>
+</div>
+
+
+</div>
+           </div> `
+
+    const closebutton = document.querySelector(".close")
+    closebutton.onclick = () => {
+
+        targetSection.style.display = "flex"
+        container.style.display = "none"
+    }
+
 }
 
 
@@ -152,8 +171,11 @@ const characterOnly = () => {
 
             const id = cardOnly[i].dataset.id
             infoIdCharacter(id)
+
+
+
+
         }
     }
 }
-
 

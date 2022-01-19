@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dongle&display=swap");
+main {
+  box-sizing: border-box;
+  font-family: "Bebas Neue", "cursive";
+  background-color: #1b1b1b;
+  color: #bdbdbd;
+}
+
+nav {
+  background-color: #53816c;
+}
+
+#cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  justify-content: center;
+  border-radius: 10%;
+}
+
+.card:hover {
+  box-sizing: border-box;
+  box-shadow: 0px 0px 15px #bdbdbd;
+  transition: 0.5s;
+  color: #1b1b1b;
+  background-image: url("https://i.pinimg.com/564x/3d/cb/4e/3dcb4e5fc28d47608361e71bf26826f5.jpg");
+}
+
+.img {
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: flex-start;
+  height: 50px;
+  width: auto;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #53816c;
+}
+
+.nav-int {
+  display: flex;
+  justify-content: center;
+  transition: 1s;
+}
+
+.nav-button {
+  display: flex;
+  justify-content: center;
+  padding: 5px 10px;
+  margin: 10px 10px;
+  text-decoration: none;
+}
+
+.container-details {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: none;
+  align-items: center;
+  transition: 0.5s;
+  top: 0;
+}
+
+.cardFull {
+  margin: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 10%;
+  background-image: url("https://i.pinimg.com/564x/3d/cb/4e/3dcb4e5fc28d47608361e71bf26826f5.jpg");
+  color: #1b1b1b;
+  transition: 1s;
+}
+
+.cardFull:hover {
+  box-sizing: border-box;
+  box-shadow: 0px 0px 15px #bdbdbd;
+  color: #1b1b1b;
+  transition: 0.5s;
+}
+
+.cardOfcards {
+  margin: 20px;
+}
+
+button {
+  border: none;
+  border-radius: 5px;
+}
+
+.close {
+  position: absolute;
+  display: block;
+  background-color: #53816c;
+  border-radius: 5px;
+}
+
+/*# sourceMappingURL=style.css.map */

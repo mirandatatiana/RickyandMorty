@@ -4,19 +4,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles/style.css" />
     <title>Document</title>
   </head>
   <body>
     <!--Navigation-->
     <nav class="nav">
-      <div>
-        <!--Logo-->
+      <div class="icon-container">
+        <img
+          class="icon"
+          src="icons/list-rick-and-morty-episodes-wikipedia-24.png"
+          alt=""
+        />
       </div>
       <div class="nav-int">
-        <a class="nav-links" href="#character">CHARACTER</a>
-        <a class="nav-links" href="#location">LOCATION</a>
-        <a class="nav-links" href="#episodes">EPISODES</a>
+        <button class="nav-button ">CHARACTER</button>
       </div>
     </nav>
 
@@ -26,10 +28,13 @@
         <nav class="nav">
           <div class="nav-int">
             <form id="form">
-              <label>
+              <label> SEARCH YOUR FAVORITE CHARACTER
                 <input id="character" type="text" />
               </label>
             </form>
+            <div class="icon-container">
+              <img src="icons/apple-touch-icon.png" alt="">
+            </div>
           </div>
         </nav>
       </section>
@@ -55,11 +60,19 @@
       <!--Cards characters-->
       <section id="section-cards">
         <div id="cards"></div>
+        <div class="container-details">
+          <div class="section-details">
+           
+          </div>
+        </div>
         <div id="card-only"></div>
       </section>
+      <div class="container">
+        
+       
+        </section>
+      </div>
       <div id="personajes"></div>
-
-      <section id="section-details"></section>
 
       <!--Cards Location-->
       <!-- <section>

@@ -1,0 +1,150 @@
+$color-principal: #343738;
+$color-secundario: #53816c;
+$tipografia-principal: "Bebas Neue", "cursive";
+
+// para poner la tipografia que quiera  y recien ahi ponems el nombre de la que queremos
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dongle&display=swap");
+main {
+  box-sizing: border-box;
+  font-family: $tipografia-principal;
+  background-color: #1b1b1b;
+  color: #bdbdbd;
+  // background-image: url("https://www.freepnglogos.com/uploads/rick-and-morty-png/rick-and-morty-portal-moon-mod-download-35.png");
+}
+nav {
+  background-color: $color-secundario;
+}
+@mixin buttons {
+  border: none;
+  border-radius: 5px;
+}
+
+@mixin flex($content: center) {
+  display: flex;
+  justify-content: $content;
+}
+
+#cards {
+  @include flex($content: center);
+  flex-wrap: wrap;
+}
+.card {
+  margin: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  justify-content: center;
+  border-radius: 10%;
+}
+
+.card:hover {
+  box-sizing: border-box;
+  box-shadow: 0px 0px 15px #bdbdbd;
+  transition: 0.5s;
+  color: #1b1b1b;
+  // background-color: $color-secundario;
+  background-image: url("https://i.pinimg.com/564x/3d/cb/4e/3dcb4e5fc28d47608361e71bf26826f5.jpg");
+}
+.img {
+  border-radius: 50%;
+  margin: 10px;
+}
+.icon-container {
+  @include flex($content: flex-start);
+  height: 50px;
+  width: auto;
+}
+
+// .icon {
+//   height: 50px;
+//   width: auto;
+
+// }
+// .img:hover {
+//   border: solid black;
+//   box-sizing: border-box;
+// }
+.nav {
+  @include flex($content: space-between);
+  background-color: $color-secundario;
+}
+
+.nav-int {
+  @include flex();
+  transition: 1s;
+}
+
+.nav-button {
+  @include flex();
+  padding: 5px 10px;
+  margin: 10px 10px;
+  text-decoration: none;
+}
+
+.container-details {
+  @include flex($content: center);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: none;
+  align-items: center;
+  transition: 0.5s;
+  top: 0;
+}
+
+.cardFull {
+  // @include flex($content: center);
+  margin: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 10%;
+  background-image: url("https://i.pinimg.com/564x/3d/cb/4e/3dcb4e5fc28d47608361e71bf26826f5.jpg");
+  color: #1b1b1b;
+  transition: 1s;
+}
+
+.cardFull:hover {
+  box-sizing: border-box;
+  box-shadow: 0px 0px 15px #bdbdbd;
+  color: #1b1b1b;
+
+  transition: 0.5s;
+}
+.cardOfcards {
+  margin: 20px;
+}
+
+button {
+  @include buttons();
+}
+
+.close {
+  position: absolute;
+  display: block;
+  background-color: $color-secundario;
+  border-radius: 5px;
+}
+// .section-details:target {
+//   // @include flex($content: center);
+//   position: absolute;
+// }
+
+// .nav-links:active {
+//   border: solid rgb(173, 173, 173);
+//   color: #bbb4c2;
+// }
+
+// .nav-links:hover {
+//   color: #bbb4c2;
+// }
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
