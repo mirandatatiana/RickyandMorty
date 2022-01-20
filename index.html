@@ -10,34 +10,33 @@
   <body>
     <!--Navigation-->
     <nav class="nav">
-      <div class="icon-container">
+      
         <img
           class="icon"
           src="icons/list-rick-and-morty-episodes-wikipedia-24.png"
           alt=""
         />
-      </div>
-      <div class="nav-int">
-        <button class="nav-button ">CHARACTER</button>
+     
+      <div>
+        <button class="nav-button">
+         <h3>CHARACTER</h3> 
+        </button>
       </div>
     </nav>
-
-    <main>
-      <!--Search Character-->
-      <section class="form-section">
-        <nav class="nav">
-          <div class="nav-int">
+<section class="form-section">
+        <nav class="nav-int">
+          <div>
             <form id="form">
-              <label> SEARCH YOUR FAVORITE CHARACTER
-                <input id="character" type="text" />
+              <label> SEARCH YOUR FAVORITE CHARACTER   
+                <input id="character" type="text" placeholder="Press enter" />
               </label>
             </form>
-            <div class="icon-container">
-              <img src="icons/apple-touch-icon.png" alt="">
-            </div>
           </div>
         </nav>
       </section>
+    <main>
+      <!--Search Character-->
+      
       <!-- 
       Search Location
       <section>
@@ -80,16 +79,19 @@
         <div id="card-location"></div>
       </section> -->
       <!--Buttons of previus page and next page -->
-      <section>
-        <div id="button-controls">
-          <button id="prev">pagina anterior</button>
-          <button id="next">pagina siguiente</button>
-        </div>
-      </section>
+      
     </main>
 
     <footer>
       <!--Poner api-->
+      <section>
+          <nav class="nav-int">
+              <div>
+          <button id="prev">pagina anterior</button>
+          <button id="next">pagina siguiente</button>
+        </div>
+          </nav>
+        </section>
     </footer>
   </body>
   <script src="app.js"></script>

@@ -1,22 +1,28 @@
 $color-principal: #343738;
-$color-secundario: #53816c;
+$color-secundario: #538157;
 $tipografia-principal: "Bebas Neue", "cursive";
-
+* {
+  font-family: $tipografia-principal;
+}
 // para poner la tipografia que quiera  y recien ahi ponems el nombre de la que queremos
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dongle&display=swap");
 main {
   box-sizing: border-box;
-  font-family: $tipografia-principal;
+
   background-color: #1b1b1b;
   color: #bdbdbd;
+  border-radius: 2%;
+  box-shadow: 0px 0px 15px #383838;
+
   // background-image: url("https://www.freepnglogos.com/uploads/rick-and-morty-png/rick-and-morty-portal-moon-mod-download-35.png");
 }
 nav {
   background-color: $color-secundario;
+  margin-bottom: 10px;
 }
+
 @mixin buttons {
   border: none;
-  border-radius: 5px;
 }
 
 @mixin flex($content: center) {
@@ -34,6 +40,7 @@ nav {
   box-sizing: border-box;
   justify-content: center;
   border-radius: 10%;
+  margin-bottom: 10px;
 }
 
 .card:hover {
@@ -46,19 +53,12 @@ nav {
 }
 .img {
   border-radius: 50%;
-  margin: 10px;
 }
 .icon-container {
-  @include flex($content: flex-start);
   height: 50px;
   width: auto;
 }
 
-// .icon {
-//   height: 50px;
-//   width: auto;
-
-// }
 // .img:hover {
 //   border: solid black;
 //   box-sizing: border-box;
@@ -66,18 +66,40 @@ nav {
 .nav {
   @include flex($content: space-between);
   background-color: $color-secundario;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px #383838;
 }
-
+.icon {
+  width: 10%;
+}
 .nav-int {
   @include flex();
+  align-items: center;
+  justify-content: center;
   transition: 1s;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px #383838;
+  margin-top: 10px;
 }
-
+label {
+  font-size: 20px;
+}
+input {
+  border-radius: 10px;
+  margin: 20px;
+  padding: 10px;
+}
 .nav-button {
   @include flex();
-  padding: 5px 10px;
+  font-size: 17px;
   margin: 10px 10px;
   text-decoration: none;
+}
+
+.nav-button:hover {
+  transition: 0.5;
+  background-image: url("https://i.pinimg.com/564x/3d/cb/4e/3dcb4e5fc28d47608361e71bf26826f5.jpg");
+  color: #1b1b1b;
 }
 
 .container-details {
@@ -115,13 +137,16 @@ nav {
 
 button {
   @include buttons();
+  border-radius: 5px;
+  background-color: #538157;
+  color: #1b1b1b;
 }
 
 .close {
   position: absolute;
   display: block;
-  background-color: $color-secundario;
-  border-radius: 5px;
+
+  background-color: #58b160;
 }
 // .section-details:target {
 //   // @include flex($content: center);

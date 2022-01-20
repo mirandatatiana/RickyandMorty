@@ -1,13 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dongle&display=swap");
+* {
+  font-family: "Bebas Neue", "cursive";
+}
+
 main {
   box-sizing: border-box;
-  font-family: "Bebas Neue", "cursive";
   background-color: #1b1b1b;
   color: #bdbdbd;
+  border-radius: 2%;
+  box-shadow: 0px 0px 15px #383838;
 }
 
 nav {
-  background-color: #53816c;
+  background-color: #538157;
+  margin-bottom: 10px;
 }
 
 #cards {
@@ -22,6 +28,7 @@ nav {
   box-sizing: border-box;
   justify-content: center;
   border-radius: 10%;
+  margin-bottom: 10px;
 }
 
 .card:hover {
@@ -34,12 +41,9 @@ nav {
 
 .img {
   border-radius: 50%;
-  margin: 10px;
 }
 
 .icon-container {
-  display: flex;
-  justify-content: flex-start;
   height: 50px;
   width: auto;
 }
@@ -47,21 +51,48 @@ nav {
 .nav {
   display: flex;
   justify-content: space-between;
-  background-color: #53816c;
+  background-color: #538157;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px #383838;
+}
+
+.icon {
+  width: 10%;
 }
 
 .nav-int {
   display: flex;
   justify-content: center;
+  align-items: center;
+  justify-content: center;
   transition: 1s;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px #383838;
+  margin-top: 10px;
+}
+
+label {
+  font-size: 20px;
+}
+
+input {
+  border-radius: 10px;
+  margin: 20px;
+  padding: 10px;
 }
 
 .nav-button {
   display: flex;
   justify-content: center;
-  padding: 5px 10px;
+  font-size: 17px;
   margin: 10px 10px;
   text-decoration: none;
+}
+
+.nav-button:hover {
+  transition: 0.5;
+  background-image: url("https://i.pinimg.com/564x/3d/cb/4e/3dcb4e5fc28d47608361e71bf26826f5.jpg");
+  color: #1b1b1b;
 }
 
 .container-details {
@@ -100,13 +131,14 @@ nav {
 button {
   border: none;
   border-radius: 5px;
+  background-color: #538157;
+  color: #1b1b1b;
 }
 
 .close {
   position: absolute;
   display: block;
-  background-color: #53816c;
-  border-radius: 5px;
+  background-color: #58b160;
 }
 
 /*# sourceMappingURL=style.css.map */
