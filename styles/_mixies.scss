@@ -1,0 +1,16 @@
+/* Buttons mixin */
+@mixin buttons {
+  border: none;
+}
+
+/*Flex Mixin*/
+@mixin flex($content: center) {
+  display: flex;
+  justify-content: $content;
+}
+
+/*Hover Mixin*/
+@mixin hover {
+  transition: 0.5s;
+  color: $principial-colour;
+}
