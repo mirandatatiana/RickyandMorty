@@ -50,12 +50,10 @@ prev.onclick = () => {
 //Character Button
 characterButton.onclick = () => {
     console.log("hola")
-    targetSection.style.display = "flex"
-    sectionCards.style.display = "none"
-    container.style.display = "flex"
+    searchInfo(actualPage)
 
 }
-//Location Button
+
 
 
 //Function for all the cards
@@ -124,13 +122,13 @@ form.onsubmit = (e) => {
 
 
 
-
+// Fetch ID
 
 const infoIdCharacter = (id) => {
     fetch(`https://rickandmortyapi.com/api/character/${id}`)
         .then(res => res.json())
         .then(data => {
-            console.log(data)
+
             view(data)
 
 
@@ -198,55 +196,3 @@ const characterOnly = () => {
     }
 }
 
-
-// const genderInfo = () => {
-//     fetch(`https://rickandmortyapi.com/api/character?gender=${gender}`)
-//         .then((res) => {
-//             return res.json()
-//         })
-//         .then((data) => {
-//             cardOnly(data.results)
-//             characterOnly()
-
-
-//         })
-// }
-
-// const select = document.querySelector("#gender")
-// const option = document.querySelector(".option-gender")
-
-// select.onchange = (e) => {
-//     e.preventDefault();
-//     genderInfo(option.value)
-// }
-
-
-// const genderOnly = () => {
-//     const cardOnlyGender = document.querySelectorAll(".option-gender")
-//     for (let i = 0; i < cardOnlyGender.length; i++) {
-//         cardOnly[i].onchange = () => {
-
-//             const id = cardOnlyGender[i].dataset.id
-//             genderInfo(id)
-
-
-
-
-//         }
-//     }
-// }
-
-
-// const cardOnlyGender = (gender) => {
-//     const html = gender.reduce((acc, curr) => {
-//         return acc + `
-//           <div class="card" data-id="${curr.id}">
-//            <h2>${curr.name}</h2>
-//             <img class="img" src =${curr.image}> </img>
-//            </div>       
-//            `
-//     }, "")
-//     cards.innerHTML = html
-
-
-// }
