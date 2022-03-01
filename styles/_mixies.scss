@@ -1,9 +1,12 @@
+// El nombre del archivo deberia ser mixins.scss, no mixies. 
+
 /* Buttons mixin */
 @mixin buttons {
   border: none;
 }
 
 /*Flex Mixin*/
+// no es necesario agregar content center ya que es el valor por defecto del param en tu mixin
 @mixin flex($content: center) {
   display: flex;
   justify-content: $content;

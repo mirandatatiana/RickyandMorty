@@ -1,12 +1,15 @@
 
 const prev = document.querySelector("#prev")
 const next = document.querySelector("#next")
+// nunca usas esta variable
 const formSection = document.querySelector(".form-section")
+// nunca usas esta variable. Deberia ser closeButton, en camelCase
 const closebutton = document.querySelector(".close")
 const container = document.querySelector(".container-details")
 const targetSection = document.querySelector(".section-cards")
 const targetDetails = document.querySelector(".section-details")
 const characterButton = document.querySelector(".nav-button")
+// nunca usas esta variable
 const sectionCards = document.querySelector("#cards")
 
 
@@ -14,6 +17,15 @@ const sectionCards = document.querySelector("#cards")
 // Home Page
 let actualPage = 1
 const searchInfo = () => {
+    // Este buscador no funciona bien en combinación con la busquda y la paginación. 
+    // Cuando busco "rick" y aprieto la pagina 2, no veo la pagina 2 de rick, sino 
+    // la pagina 2 de todos los personajes. 
+    // No necesitas tantos fetch sino uno solo que pueda seguir todas las variables. 
+    // Por ejemplo, asi:
+    // const name = inputCharacter.value 
+    // fetch(`https://rickandmortyapi.com/api/character?page=${paginaActual}&name=${name}`)
+    // Y podes eliminar la funcion searchInfoCharacter
+
     fetch(`https://rickandmortyapi.com/api/character?page=${actualPage}`)
         .then((res) => {
             return res.json()
@@ -25,6 +37,9 @@ const searchInfo = () => {
 
         })
 }
+
+// Las variables que se ejecutan apenas carga el codigo deben ir todas juntas al final, 
+// para que el flujo de ejecucion sea mas claro
 searchInfo()
 
 
@@ -49,6 +64,7 @@ prev.onclick = () => {
 
 //Character Button
 characterButton.onclick = () => {
+    // No dejes console log en una entrega
     console.log("hola")
     searchInfo(actualPage)
 
@@ -73,7 +89,8 @@ const cardsAllHTML = (data) => {
 
 }
 searchInfo()
-
+// estos saltos de linea al azar que dejas confunden mucho la lectura, 
+// no agregues seis o siete enter a menos que tenga un proposito. 
 
 
 
@@ -111,6 +128,7 @@ const cardOnly = (character) => {
 
 
 //Form for searcg=h characters
+// Todas las variables del dom deben ir agrupadas arriba
 const form = document.querySelector("#form")
 const inputCharacter = document.querySelector("#character")
 
@@ -142,7 +160,7 @@ const view = (data) => {
     container.style.display = "flex"
 
 
-
+// Muy desprolijo el tabulado
     targetDetails.innerHTML =
         `
           <div class="card-details">
@@ -167,7 +185,7 @@ const view = (data) => {
 
 </div>
            </div> `
-
+// closeButton, en camelCase
     const closebutton = document.querySelector(".close")
     closebutton.onclick = () => {
 

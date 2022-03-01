@@ -4,8 +4,12 @@
 * {
   font-family: $principal-typography;
 }
+
+// es mejor importar tipografias en html, ya que es mas rapida la carga alli
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dongle&display=swap");
 
+// No aprovechas el anidado, y es una lastima, porque es una herramienta muy poderosa y muy 
+// importante practicarla. Anotate para hacerlo apenas puedas. 
 /* Main Part */
 main {
   box-sizing: border-box;
@@ -38,11 +42,13 @@ nav {
 
 /* Princial Cards Container */
 #cards {
+  // no es necesario agregar content center ya que es el valor por defecto del param en tu mixin
   @include flex($content: center);
   flex-wrap: wrap;
 }
 /* Details Cards Container */
 .container-details {
+  // no es necesario agregar content center ya que es el valor por defecto del param en tu mixin
   @include flex($content: center);
   position: fixed;
   width: 100%;
@@ -143,6 +149,7 @@ input {
   }
 }
 
+// No dejes codigo vacio. Si no llegaste a hacerlo, se borra. 
 @media (min-width: 768px) {
 }
 
