@@ -1,85 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://kit.fontawesome.com/eb84466c3b.js" crossorigin="anonymous"></script>
-    <link
-    rel="stylesheet"
-    href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
-    crossorigin="anonymous"
-  />
-    <link rel="stylesheet" href="styles/style.css" />
-<link rel="icon" type="image/ico" href="icons/favicon-16x16.png">   
-    
-    <title>
-       Rick and Morty</title>
-  </head>
-  <body>
-    <!--Navigation-->
-    <nav class="nav">
-      
-        <img
-          class="icon"
-          src="icons/list-rick-and-morty-episodes-wikipedia-24.png"
-          alt=""
-        />
-     
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/eb84466c3b.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="icon" type="image/ico" href="icons/favicon-16x16.png">
+
+  <title>
+    Rick and Morty</title>
+</head>
+
+<body>
+
+  <!--Navigation-->
+  <nav class="nav">
+    <img class="icon" src="icons/list-rick-and-morty-episodes-wikipedia-24.png" alt="" />
+    <div>
+      <button class="nav-button">
+        CHARACTER
+      </button>
+    </div>
+  </nav>
+
+  <!-- Form Character-->
+  <section class="form-section">
+    <nav class="nav-int">
       <div>
-        <button class="nav-button">
-         CHARACTER
-        </button>
+        <form id="form">
+          <label> SEARCH YOUR FAVORITE CHARACTER
+            <input id="character" type="text" placeholder="Press enter" />
+          </label>
+        </form>
       </div>
+      <div>
     </nav>
-<section class="form-section">
-        <nav class="nav-int">
-          <div>
-            <!-- Form Character-->
-            <form id="form">
-              <label> SEARCH YOUR FAVORITE CHARACTER   
-                <input id="character" type="text" placeholder="Press enter" />
-              </label>
-            </form>
-          </div>
-          <div>
-        
-          </div>
-        </nav>
-      </section>
-    <main>
-     
-      <!--Cards characters-->
-      <section class="section-cards">
-        <div id="cards"></div>
-        <div class="container-details">
-          <div class="section-details">
-           
-          </div>
+  </section>
+
+  <!--Cards characters-->
+  <main>
+    <section class="section-cards">
+      <div id="cards"></div>
+      <div class="container-details">
+        <div class="section-details">
         </div>
-        <div id="card-only"></div>
-      </section>
-      <div class="container">
-        
-       
-        </section>
       </div>
+      <div id="card-only"></div>
+    </section>
 
-    </main>
+    <div class="container">
+      <!-- </section> -->
+    </div>
+  </main>
 
-    <footer>
-      <section>
-          <nav class="nav-int">
-              <div>
-    <!--Buttons of previus page and next page -->
-          <button id="prev">
-            LAST PAGE</button>
+  <!--Buttons of previus page and next page -->
+  <footer>
+    <section>
+      <nav class="nav-int">
+        <div>
+          <button id="prev">LAST PAGE</button>
           <button id="next">NEXT PAGE</button>
         </div>
-          </nav>
-        </section>
-    </footer>
-  </body>
-  <script src="app.js"></script>
+      </nav>
+    </section>
+  </footer>
+</body>
+<script src="app.js"></script>
+
 </html>

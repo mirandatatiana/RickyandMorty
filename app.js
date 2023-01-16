@@ -20,15 +20,10 @@ const searchInfo = () => {
         })
         .then((data) => {
             cardsAllHTML(data.results)
-
             characterOnly()
-
         })
 }
 searchInfo()
-
-
-
 
 // Next Page
 next.onclick = () => {
@@ -37,15 +32,12 @@ next.onclick = () => {
 }
 //Previuos Page
 prev.onclick = () => {
-
     if (actualPage === 1) {
         prev.disabled = true
     }
     actualPage = actualPage - 1
     searchInfo()
 }
-
-
 
 //Character Button
 characterButton.onclick = () => {
@@ -54,10 +46,7 @@ characterButton.onclick = () => {
 
 }
 
-
-
 //Function for all the cards
-
 const cardsAllHTML = (data) => {
     const html = data.reduce((acc, curr) => {
         return acc + `
@@ -69,15 +58,8 @@ const cardsAllHTML = (data) => {
            `
     }, "")
     cards.innerHTML = html
-
-
 }
 searchInfo()
-
-
-
-
-
 
 //Seach Caracter
 const searchInfoCharacter = (name) => {
@@ -88,11 +70,8 @@ const searchInfoCharacter = (name) => {
         .then((data) => {
             cardOnly(data.results)
             characterOnly()
-
-
         })
 }
-
 
 //Search Only one character
 const cardOnly = (character) => {
@@ -105,72 +84,48 @@ const cardOnly = (character) => {
            `
     }, "")
     cards.innerHTML = html
-
-
 }
-
 
 //Form for searcg=h characters
 const form = document.querySelector("#form")
 const inputCharacter = document.querySelector("#character")
-
 form.onsubmit = (e) => {
     e.preventDefault();
     searchInfoCharacter(inputCharacter.value)
 }
 
-
-
-
 // Fetch ID
-
 const infoIdCharacter = (id) => {
     fetch(`https://rickandmortyapi.com/api/character/${id}`)
         .then(res => res.json())
         .then(data => {
-
             view(data)
-
-
-
         })
 }
 
 const view = (data) => {
-
     targetDetails.style.display = "flex"
     container.style.display = "flex"
-
-
-
     targetDetails.innerHTML =
         `
-          <div class="card-details">
-          <button class="close">✖</button>
-          
- <img class="img" src = "${data.image}"> </img>
- <div class="card-details-info">
- 
-           <h2>${data.name} </h2>
-           <h3><b>Status: </b>${data.status} - ${data.species} - ${data.gender}</h3>          
- 
-         <div>
-<h3>Firts Seen in:</h3>
-<p> ${data.origin.name}</p>
-</div>
-
-<div>
-<h3>Last Location in:</h3>
-<p> ${data.location.name}</p>
-</div>
-
-
-</div>
-           </div> `
+            <div class="card-details">
+             <button class="close">✖</button>        
+             <img class="img" src = "${data.image}"> </img>
+                <div class="card-details-info">
+                    <h2>${data.name} </h2>
+                    <h3><b>Status: </b>${data.status} - ${data.species} - ${data.gender}</h3>          
+                    <div>
+                     <h3>Firts Seen in:</h3>
+                     <p> ${data.origin.name}</p>
+                    </div>
+                <div>
+                  <h3>Last Location in:</h3>
+                  <p> ${data.location.name}</p>
+                </div>
+            </div>`
 
     const closebutton = document.querySelector(".close")
     closebutton.onclick = () => {
-
         targetSection.style.display = "flex"
         container.style.display = "none"
     }
@@ -185,13 +140,8 @@ const characterOnly = () => {
     const cardOnly = document.querySelectorAll(".card")
     for (let i = 0; i < cardOnly.length; i++) {
         cardOnly[i].onclick = () => {
-
             const id = cardOnly[i].dataset.id
             infoIdCharacter(id)
-
-
-
-
         }
     }
 }
