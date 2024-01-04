@@ -4,9 +4,9 @@
 
 
 Welcome to the Rick and Morty Explorer project on GitHub! 🌌
-![1E996D81-3BBE-421E-94E5-9503B640F03A](https://github.com/mirandatatiana/RickyandMorty/assets/76907106/f6e25e21-1422-42dd-a177-a572f19e8b70)
-![1DFE0E4F-867E-477E-B705-91341BE99292](https://github.com/mirandatatiana/RickyandMorty/assets/76907106/b6a08d69-f1bb-4d95-9052-8c267d9fa56c)
-![D55DEC40-97C2-49AD-B294-B4EC8FE24990](https://github.com/mirandatatiana/RickyandMorty/assets/76907106/84aca723-26d3-4654-a410-e5633bf1ad2f)
+![D0E40050-8D70-4866-A8C7-D190DBC28C52](https://github.com/mirandatatiana/RickyandMorty/assets/76907106/4f91cb34-487c-42ef-974d-72a7c3b98561)
+![DC429EDA-2A5D-4B36-AAC8-44949B860006](https://github.com/mirandatatiana/RickyandMorty/assets/76907106/c87e1ab4-2358-417d-96fd-fd0a6e557ced)
+
 
  <a href="https://mirandatatiana.github.io/RickyandMorty/">View Demo</a>
 ### About
@@ -34,6 +34,14 @@ To run this project locally, simply clone the repository and open `index.html` i
 git clone https://github.com/your-username/rick-and-morty-explorer.git
 cd rick-and-morty-explorer
 ```
+## Contact
+LinkedIn: [Tatiana Miranda](https://www.linkedin.com/in/tatianayamila-miranda/) 
+<br/>
+Email: miranda.tatianayamila@gmail.com
+<br/>
+Project Link: [Rick and Morty Page](https://mirandatatiana.github.io/RickyandMorty/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Live Demo
 Check out the live demo  <a href="https://mirandatatiana.github.io/RickyandMorty/">Here</a>
